@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача: {{ task.title }}</title>
+</head>
+<body>
+    <h2>Детали задачи: {{ task.title }}</h2>
+    <p><strong>Описание:</strong> {{ task.description|default:"Описание отсутствует" }}</p>
+    <p><strong>Статус:</strong> {% if task.is_completed %}Выполнено{% else %}Не выполнено{% endif %}</p>
+    <p><strong>Дата создания:</strong> {{ task.created_at }}</p>
+    
+    <hr>
+    <a href="{% url 'task_list' %}">Вернуться к общему списку</a>
+</body>
+</html>
