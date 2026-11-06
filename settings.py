@@ -34,7 +34,7 @@ ROOT_URLCONF = 'main_urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'todo' / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -46,8 +46,6 @@ TEMPLATES = [
         },
     },
 ]
-
-WSGI_APPLICATION = 'wsgi.application'
 
 DATABASES = {
     'default': {
